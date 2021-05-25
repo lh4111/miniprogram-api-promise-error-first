@@ -1,24 +1,24 @@
 {
-  "name": "miniprogram-api-promise",
-  "version": "1.0.4",
-  "description": "Extend WeChat miniprogram's api to surport promise",
+  "name": "miniprogram-api-promise-error-first",
+  "version": "1.0.0",
+  "description": "Extend WeChat miniprogram's api to surport error-first pattern promise",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wechat-miniprogram-admin/miniprogram-api-promise.git"
+    "url": "git+https://github.com/lh4111/miniprogram-api-promise.git"
   },
   "keywords": [
     "miniprogram",
     "api",
     "promise"
   ],
-  "author": "sanfordsun",
+  "author": "lihao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wechat-miniprogram-admin/miniprogram-api-promise/issues"
+    "url": "https://github.com/lh4111/miniprogram-api-promise/issues"
   },
-  "homepage": "https://github.com/wechat-miniprogram-admin/miniprogram-api-promise#readme"
+  "homepage": "https://github.com/lh4111/miniprogram-api-promise#readme"
 }

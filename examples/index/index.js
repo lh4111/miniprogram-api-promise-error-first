@@ -12,16 +12,18 @@ Page({
     promisifyAll(wx, wxp)
     promisify(wx.getSystemInfo)().then(console.log)
   },
-  tap() {
-    wxp.showModal({
+  async tap() {
+    const [err, res] = await wxp.showModal({
       title: '打开 Setting'
-    }).then(() => {
-      wxp.openSetting()
     })
 
-    wxp.getSystemInfo().then(res => {
-      console.log('Async: getSystemInfo ', res)
-    })
+    console.log('showModal', err, res)
+
+    wxp.openSetting()
+
+    const [sysErr, sysInfo] = await wxp.getSystemInfo()
+    console.log('Async: getSystemInfo ', sysInfo)
+
     console.log('Sycn getSystemInfoSync', wxp.getSystemInfoSync())
     console.log('wx.env', wxp.env)
     wxp.getSystemInfo({

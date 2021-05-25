@@ -13,11 +13,15 @@ function hasCallback(args) {
 function _promisify(func) {
   if (typeof func !== 'function') return fn
   return (args = {}) =>
-    new Promise((resolve, reject) => {
+    new Promise(resolve => {
       func(
         Object.assign(args, {
-          success: resolve,
-          fail: reject
+          success: res => {
+            resolve([null, res])
+          },
+          fail: err => {
+            resolve([err, null])
+          }
         })
       )
     })
